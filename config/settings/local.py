@@ -19,6 +19,8 @@ from .base import *  # noqa
 DEBUG = env.bool('DJANGO_DEBUG', default=True)
 TEMPLATES[0]['OPTIONS']['debug'] = DEBUG
 
+ALLOWED_HOSTS = ['139.59.236.7', 'localhost', '127.0.0.1']
+
 # SECRET CONFIGURATION
 # ------------------------------------------------------------------------------
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#secret-key
@@ -74,7 +76,7 @@ TEST_RUNNER = 'django.test.runner.DiscoverRunner'
 # ------------------------------------------------------------------------------
 
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['139.59.236.7', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -94,7 +96,7 @@ INSTALLED_APPS += [
     # 'allauth.socialaccount',
     'allauth.socialaccount.providers.facebook',
     # 'allauth.socialaccount.providers.twitter',
-    # 'djcelery',
+    'djcelery',
     # # local apps
     'mainapp',
     'action',
